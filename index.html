@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UL Biryani's - డిజిటల్ మెనూ</title>
+
+    <!-- Telugu Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: white;
+            color: #222;
+            font-family: "Noto Sans Telugu", sans-serif;
+        }
+
+        .container {
+            width: 94%;
+            max-width: 850px;
+            margin: 25px auto;
+        }
+
+        /* HOTEL NAME */
+
+        .header {
+            text-align: center;
+            padding: 25px 10px;
+            border-bottom: 3px solid #b00000;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #a00000;
+            font-size: 48px;
+            font-weight: 800;
+        }
+
+        .header p {
+            margin-top: 10px;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        /* TIMING */
+
+        .timing {
+            text-align: center;
+            margin: 25px 0;
+            padding: 18px;
+            background: #fff5d6;
+            border-radius: 15px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        /* MENU */
+
+        .menu {
+            border: 2px solid #ddd;
+            border-radius: 18px;
+            padding: 25px;
+        }
+
+        .menu h2 {
+            text-align: center;
+            color: #a00000;
+            font-size: 38px;
+            margin-top: 5px;
+            margin-bottom: 25px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5px;
+            border-bottom: 2px solid #ddd;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .price {
+            color: #a00000;
+            font-size: 27px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        /* BUTTONS */
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .call {
+            background: #b00000;
+        }
+
+        .whatsapp {
+            background: #168b45;
+        }
+
+        /* QR SECTION */
+
+        .qr-section {
+            margin-top: 30px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 2px solid #ddd;
+            border-radius: 18px;
+        }
+
+        .qr-section h2 {
+            color: #a00000;
+            font-size: 38px;
+            margin-top: 5px;
+        }
+
+        .qr-section p {
+            font-size: 23px;
+            font-weight: 600;
+        }
+
+        #qrcode {
+            display: flex;
+            justify-content: center;
+            margin: 30px auto;
+        }
+
+        #qrcode img {
+            padding: 12px;
+            border: 2px solid #222;
+            background: white;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            text-align: center;
+            padding: 30px 10px;
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .header h1 {
+                font-size: 38px;
+            }
+
+            .header p {
+                font-size: 20px;
+            }
+
+            .timing {
+                font-size: 20px;
+            }
+
+            .menu {
+                padding: 18px;
+            }
+
+            .menu h2 {
+                font-size: 32px;
+            }
+
+            .item {
+                font-size: 20px;
+                padding: 18px 2px;
+            }
+
+            .price {
+                font-size: 22px;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .qr-section h2 {
+                font-size: 32px;
+            }
+
+            .qr-section p {
+                font-size: 19px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <!-- HOTEL NAME -->
+
+    <div class="header">
+
+        <h1>🍗 UL Biryani's</h1>
+
+        <p>రుచికరమైన బిర్యానీ & మీల్స్</p>
+
+    </div>
+
+
+    <!-- TIMING -->
+
+    <div class="timing">
+
+        🕐 మధ్యాహ్నం 12:00 PM నుండి 3:00 PM వరకు
+
+    </div>
+
+
+    <!-- MENU -->
+
+    <div class="menu">
+
+        <h2>🍽️ మా మెనూ</h2>
+
+
+        <div class="item">
+
+            <span>సింగిల్ బిర్యానీ</span>
+
+            <span class="price">₹100</span>
+
+        </div>
+
+
+        <div class="item">
+
+            <span>బిర్యానీ విత్ చికెన్ ఫ్రై</span>
+
+            <span class="price">₹150</span>
+
+        </div>
+
+
+        <div class="item">
+
+            <span>చికెన్ దమ్ బిర్యానీ</span>
+
+            <span class="price">₹150</span>
+
+        </div>
+
+
+        <div class="item">
+
+            <span>ఫుల్ మీల్స్</span>
+
+            <span class="price">₹150</span>
+
+        </div>
+
+
+        <div class="item">
+
+            <span>సింగిల్ ప్లేట్ మీల్</span>
+
+            <span class="price">₹100</span>
+
+        </div>
+
+
+        <div class="item">
+
+            <span>మీల్ విత్ చికెన్ ఫ్రై</span>
+
+            <span class="price">₹150</span>
+
+        </div>
+
+
+        <!-- CALL AND WHATSAPP -->
+
+        <div class="buttons">
+
+            <a
+                class="btn call"
+                href="tel:8501017157">
+
+                📞 కాల్ చేయండి
+
+            </a>
+
+
+            <a
+                class="btn whatsapp"
+                href="https://wa.me/918501017157?text=Hello%20UL%20Biryani's,%20I%20want%20to%20order%20food."
+                target="_blank">
+
+                💬 WhatsApp ఆర్డర్
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- QR CODE -->
+
+    <div class="qr-section">
+
+        <h2>📱 డిజిటల్ మెనూ</h2>
+
+        <p>
+            మెనూను చూడటానికి QR కోడ్‌ను స్కాన్ చేయండి
+        </p>
+
+
+        <!-- QR CODE APPEARS HERE -->
+
+        <div id="qrcode"></div>
+
+
+        <p>
+            📷 QR స్కాన్ చేసి UL Biryani's మెనూను ఓపెన్ చేయండి
+        </p>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        ❤️ UL Biryani's — మీ రుచికి మా వంట
+
+        <br><br>
+
+         phone number - 📞 8501017157
+        whatsapp number - 8501017157
+
+    </div>
+
+</div>
+
+
+<!-- QR CODE SCRIPT -->
+
+<script>
+
+    new QRCode(
+        document.getElementById("qrcode"),
+        {
+            text: window.location.href,
+            width: 300,
+            height: 300
+        }
+    );
+
+</script>
+
+
+</body>
+</html>
